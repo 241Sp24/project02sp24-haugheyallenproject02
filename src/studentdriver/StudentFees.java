@@ -1,14 +1,52 @@
 
 package studentdriver;
 
-public class StudentFees {
-    // Instance variblis
-    private String StudentsName;
+public abstract class StudentFees {
+    // Instance variabes
+    private String studentName;
     private int studentID;
     private boolean isEnrolled;
-    private int CREADITS_PER_COURSE = 3;
+    private int CREDITS_PER_COURSE = 3;
     private double PER_CREDIT_FEE = 543.50;
     
-    //
+    // Stedent fees class 
+    public StudentFees(String studentName, int studentID, boolean isEnrolled) {
+        this.isEnrolled = isEnrolled;
+        this.studentName = studentName;
+        this.studentID = studentID;
+    }
+    // Getters and setters for the studentFees class
+    public String getStudentName(){
+        return studentName;
+    }
+    public int getStudentID(){
+        return studentID;
+    }
+    public boolean isISsEnrolled(){
+        return true || false;
+    }
+    public int getCREDITS_PER_COURSE(){
+        return CREDITS_PER_COURSE;
+    }
+    public double getPER_CREDIT_FEE(){
+        return PER_CREDIT_FEE;
+    }
+    public void setStudentName(String studentName){
+        this.studentName = studentName;
+    }
+    public void setStudentID(int studentID){
+        this.studentID = studentID;
+    }
+    public void setIsEnrolled(boolean isEnrolled){
+        this.isEnrolled = isEnrolled;
+    }
+    // Apstact metho getPayableAmount 
+    abstract double getPayableAmount();
+    
+    // toString method
+    public String toString(){
+        return "";
+    }
+    
     
 }
