@@ -3,13 +3,10 @@ package studentdriver;
 
 public class StudentDriver {
 
-    
-
-public class StudentDriver {
-
 
     public static void main(String[] args) {
         System.out.println("Project02");
-    }
+    
 
+}
 }
