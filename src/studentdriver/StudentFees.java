@@ -1,6 +1,7 @@
 
 package studentdriver;
 
+// The studentfees clas is an "Abstract class"
 public abstract class StudentFees {
     // Instance variabes
     private String studentName;
@@ -9,7 +10,7 @@ public abstract class StudentFees {
     private int CREDITS_PER_COURSE = 3;
     private double PER_CREDIT_FEE = 543.50;
     
-    // Stedent fees class 
+    // Stedent fees class usind "this" statment 
     public StudentFees(String studentName, int studentID, boolean isEnrolled) {
         this.isEnrolled = isEnrolled;
         this.studentName = studentName;
@@ -40,7 +41,7 @@ public abstract class StudentFees {
     public void setIsEnrolled(boolean isEnrolled){
         this.isEnrolled = isEnrolled;
     }
-    // Apstact metho getPayableAmount 
+    // Apstact method getPayableAmount 
     abstract double getPayableAmount();
     
     // toString method

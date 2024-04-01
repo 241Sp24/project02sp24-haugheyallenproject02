@@ -17,7 +17,7 @@ public class UGStudent {
     }
     // HasScholarship method
     public boolean isHasScholarship(){
-        // I might need to add smoe a lection structures here
+        // I might need to add some a selection structures here
         return this.hasScholarship;
     }
     // Getters for the UGStudent class
