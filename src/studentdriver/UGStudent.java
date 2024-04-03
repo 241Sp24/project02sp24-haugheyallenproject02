@@ -30,7 +30,7 @@ public class UGStudent extends StudentFees{
     }
     public double getPayableAmount(){
         // Tuition fee amount calculated 
-        double tuitionCost = (((CREDITS_PER_COURSE * coursesEnrolled * PER_CREDIT_FEE) + ADDITONAL_FEE) - scholarshipAmount);
+        double tuitionCost = (((super.getCREDITS_PER_COURSE() * coursesEnrolled * super.getCREDITS_PER_COURSE()) + ADDITONAL_FEE) - scholarshipAmount);
         double totalCost = (tuitionCost + ADDITONAL_FEE);
         // if statmente that subtacts the schoalrship amount
         if(hasScholarship) {
