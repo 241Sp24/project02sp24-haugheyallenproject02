@@ -1,7 +1,7 @@
 
 package studentdriver;
 
-public class UGStudent {
+public class UGStudent extends StudentFees{
     // Private instance varibles 
     private double scholarshipAmount;
     private int coursesEnrolled;
@@ -9,7 +9,8 @@ public class UGStudent {
     private double ADDITONAL_FEE = 820.70;
     
     // UGStudent
-    public UGStudent(String studentName, int StudentID, boolean isEnrolled, boolean hasScholarship, double scholarshipAmount, int coursesEnrolled){
+    public UGStudent(String studentName, int studentID, boolean isEnrolled, boolean hasScholarship, double scholarshipAmount, int coursesEnrolled) {
+        super(studentName, studentID, isEnrolled);
         this.coursesEnrolled = coursesEnrolled;
         this.hasScholarship = hasScholarship;
         this.scholarshipAmount = scholarshipAmount;
@@ -29,7 +30,7 @@ public class UGStudent {
     }
     public double getPayableAmount(){
         // Tuition fee amount calculated 
-        double tuitionCost = (coursesEnrolled * ADDITONAL_FEE);
+        double tuitionCost = (((CREDITS_PER_COURSE * coursesEnrolled * PER_CREDIT_FEE) + ADDITONAL_FEE) - scholarshipAmount);
         double totalCost = (tuitionCost + ADDITONAL_FEE);
         // if statmente that subtacts the schoalrship amount
         if(hasScholarship) {

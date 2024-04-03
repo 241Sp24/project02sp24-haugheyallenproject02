@@ -2,7 +2,7 @@
 package studentdriver;
 
 // The studentfees clas is an "Abstract class"
-public abstract class StudentFees {
+public abstract class StudentFees{
     // Instance variabes
     private String studentName;
     private int studentID;
@@ -23,8 +23,8 @@ public abstract class StudentFees {
     public int getStudentID(){
         return studentID;
     }
-    public boolean isISsEnrolled(){
-        return true || false;
+    public boolean isIsEnrolled(){
+        return isEnrolled;
     }
     public int getCREDITS_PER_COURSE(){
         return CREDITS_PER_COURSE;
