@@ -13,12 +13,12 @@ public class GraduateStudent extends UGStudent{
         super(studentName, studentID, isEnrolled);
         this.coursesEnrolled = coursesEnrolled;
         this.graduateAssistant = graduateAssistant;
-        this.ADDITIONAL_FEES = ADDITIONAL_FEES;
-        this.isGraduateAssistant = isGraduateAssistant;
+        this.ADDITIONAL_FEES = ADDITIONAL_FEES;            
         
-                
-        
-}
+    }
+    public GraduateStudent(String studentName, int studentID, boolean isEnrolled, boolean isGraduateAssistant, String graduateAssistantType, int coursesEnrolled) {
+            
+    }
     
     
 }
