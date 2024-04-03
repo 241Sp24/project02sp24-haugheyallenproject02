@@ -2,7 +2,7 @@
 package studentdriver;
 
 // The studentfees clas is an "Abstract class"
-public abstract class StudentFees{
+public abstract class StudentFees {
     // Instance variabes
     private String studentName;
     private int studentID;
