@@ -9,21 +9,36 @@ public class StudentDriver {
         System.out.println("Project02");
         
         //open file to read
-        int numOfStudents = 0;
+        int numOfStu = 0;
         File inputFile = new File("input.csv");
         Scanner input = new Scanner(inputFile);
         
-        //determine length of array
-        while(input.hasNext()){
-            numOfStudents += 1;
-        }
+        //ask for user input
+        System.out.println("Enter the no of UG students: ");
+        int ugstu = input.nextInt();
+        
+        System.out.println("Enter the no of Graduate students: ");
+        int gradstu = input.nextInt();
+        
+        System.out.println("Enter the no of online students: ");
+        int onstu = input.nextInt();
         
         //create array (the assignment gave an example to format it like this, but I feel like an ArrayList would make more sense?)
-        StudentFees[] students = new StudentFees[numOfStudents];
+        ArrayList<StudentFees> students = new ArrayList<>();
         
         //put information into the array
         while(input.hasNext()){
-            //we need to figure out how to determine which student type is which to be able to differentiate which class to use
+            if(numOfStu < ugstu){
+                //StudentFees s1 = new UGStudent(input.split(","));
+            }
+            else if(numOfStu < gradstu){
+                
+            }
+            else{
+                
+            }
+            //use .split(",") for each line
+            numOfStu += 1;
         }
     
 
