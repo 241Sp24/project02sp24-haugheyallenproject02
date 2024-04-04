@@ -21,7 +21,7 @@ public class GraduateStudent extends StudentFees{
         this.coursesEnrolled = coursesEnrolled;
     }
     
-    //is graduate assistant
+    //is graduate assistant -- idk if i need to do something differetn for this one
     public boolean isIsGraduateAssistant(){
         return this.isGraduateAssistant;
     }
