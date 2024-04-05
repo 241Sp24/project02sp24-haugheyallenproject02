@@ -24,12 +24,12 @@ public class StudentDriver {
         int onstu = input.nextInt();
         
         //create array (the assignment gave an example to format it like this, but I feel like an ArrayList would make more sense?)
-        ArrayList<StudentFees> students = new ArrayList<>();
+        StudentFees[] students = new StudentFees[ugstu + gradstu + onstu];
         
         //put information into the array
         while(input.hasNext()){
             if(numOfStu < ugstu){
-                //StudentFees s1 = new UGStudent(input.split(","));
+                students[numOfStu] = new UGStudent(input.split(","));
             }
             else if(numOfStu < gradstu){
                 
