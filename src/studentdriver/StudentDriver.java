@@ -32,13 +32,13 @@ public class StudentDriver {
                 students[numOfStu] = new UGStudent(input.split(","));
             }
             else if(numOfStu < gradstu){
-                
+                students[numOfStu] = new GraduateStudent(input.split(","));
             }
             else{
-                
+                students[numOfStu] = new OnlineStudent(input.split(","));
             }
-            //use .split(",") for each line
-            numOfStu += 1;
+            
+            numOfStu ++;
         }
     
 
