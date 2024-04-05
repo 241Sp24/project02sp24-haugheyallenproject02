@@ -16,12 +16,15 @@ public class StudentDriver {
         //ask for user input
         Scanner userInput = new Scanner(System.in);
         
+        // Header informtion for project
         System.out.print("Enter the no of UG students: ");
         int ugstu = userInput.nextInt();
         
+        // Header informtion for project
         System.out.print("Enter the no of Graduate students: ");
         int gradstu = userInput.nextInt();
         
+        // Header informtion for project
         System.out.print("Enter the no of online students: ");
         int onstu = userInput.nextInt();
         
@@ -71,7 +74,41 @@ public class StudentDriver {
             
             numOfStu ++;
         }
+        System.out.println(""); // Space
+        
+        // Undergraduate Header
+        System.out.println("**********Undergraduate students list**********");
+        
+        // Crate a loop that will print out the Undergraduate Student infoation
+        for (StudentFees student : students) {
+            if (student instanceof UGStudent) {
+                System.out.println(student);
+                System.out.println("");
+            }
+    }
+        
+        // Graduate Header
+        System.out.println("**********Graduate students list**********");
+        // Crate a loop that will print out the Graduate Student infoation 
+        for (StudentFees student : students) {
+            if (student instanceof GraduateStudent) {
+                System.out.println(student);
+                System.out.println("");
+            }
+    }
+        
+        // Online Header
+        System.out.println("**********Online students list**********");
+        // Crate a loop that will print out the Online Student infoation 
+        for (StudentFees student : students) {
+            if (student instanceof OnlineStudent) {
+                System.out.println(student);
+                System.out.println("");
+            }
+    }
     
-
+   
+    
+    
 }
 }
