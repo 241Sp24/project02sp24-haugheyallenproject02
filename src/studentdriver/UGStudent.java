@@ -40,7 +40,13 @@ public class UGStudent extends StudentFees{
     }
     // toString method
     public String toString(){
-        return "";
+        return "Student name: " + this.getStudentName() +
+                "\nStudent id: " + this.getStudentID() +
+                "\nEnrolled: " + isIsEnrolled () +            
+                "\nScholarship: " + isHasScholarship () + 
+                "\nScholarship amount: " + getScholarshipAmount() +
+                "\nCourses enrolled: " + getCoursesEnrolled () +
+                "\nPayable amount: " + getPayableAmount();
     }
     
 }

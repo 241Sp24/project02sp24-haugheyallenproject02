@@ -49,7 +49,7 @@ public abstract class StudentFees {
         return "Student name: " + this.getStudentName() +
                 "\nStudent id: " + this.getStudentID() +
                 "\nEnrolled: " + isIsEnrolled () +
-                "\nPayable amount: " + getPayableAmount()  ;
+                "\nPayable amount: " + getPayableAmount();
                 //"\nScholarship: " + hasScholarship () + 
                 //"\nScholarship amount: " + scholarshipAmount +
                 //"\nCourses enrolled: " + getCoursesEnrolled () +
