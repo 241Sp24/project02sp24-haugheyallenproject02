@@ -7,6 +7,22 @@ public class StudentDriver {
 
     public static void main(String[] args) throws FileNotFoundException{
         System.out.println("Project02");
+    
+        // Varablies Undergraduate Students details, Graduate Students details, and Online Students details
+        int totalUGStudents = 0;
+        double totalUGStudentFees = 0;
+        double totalUGStudentScholarship = 0;
+        double totalUGStudentCourses = 0;
+        
+        // GraduateStudent
+        int totalGraduateStudent = 0;
+        double totalGraduateStudentFees = 0;
+        double totalGraduateStudentScholarship = 0;
+        double totalGraduateStudentCourses = 0;
+        
+        // Online Student
+        int totalOnlinetudents = 0;
+        double totalOnlineStudentFees = 0;
         
         //open file to read
         int numOfStu = 0;
@@ -74,11 +90,10 @@ public class StudentDriver {
             
             numOfStu ++;
         }
-        System.out.println(""); // Space
         
+        System.out.println(""); // Space
         // Undergraduate Header
         System.out.println("**********Undergraduate students list**********");
-        
         // Crate a loop that will print out the Undergraduate Student infoation
         for (StudentFees student : students) {
             if (student instanceof UGStudent) {
