@@ -46,10 +46,10 @@ public abstract class StudentFees {
     
     // toString method
     public String toString(){
-        return String.format("Student name: " + this.getStudentName() +
+        return "Student name: " + this.getStudentName() +
                 "\nStudent id: " + this.getStudentID() +
-                "\nEnrolled: " + isEnrolled () +
-                "\nPayable amount: " + getPayableAmount());
+                "\nEnrolled: " + isIsEnrolled () +
+                "\nPayable amount: " + getPayableAmount()  ;
                 //"\nScholarship: " + hasScholarship () + 
                 //"\nScholarship amount: " + scholarshipAmount +
                 //"\nCourses enrolled: " + getCoursesEnrolled () +
