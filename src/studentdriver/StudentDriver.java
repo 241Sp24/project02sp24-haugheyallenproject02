@@ -8,7 +8,7 @@ public class StudentDriver {
     public static void main(String[] args) throws FileNotFoundException{
         System.out.println("Project02");
     
-        // Varablies Undergraduate Students details, Graduate Students details, and Online Students details
+        // Varablies UGStudents details, Graduate Students details, and Online Students details
         int totalUGStudents = 0;
         double totalUGStudentFees = 0;
         double totalUGStudentScholarship = 0;
@@ -21,8 +21,18 @@ public class StudentDriver {
         double totalGraduateStudentCourses = 0;
         
         // Online Student
-        int totalOnlinetudents = 0;
+        int totalOnlineStudents = 0;
         double totalOnlineStudentFees = 0;
+        
+        // Find the average and other information
+        double avgUGStudentFee = totalUGStudentFees / totalUGStudents;
+        double avgGraduateStudentFee = totalGraduateStudentFees / totalGraduateStudent;
+        double avgOnlineStudentFee = totalOnlineStudentFees / totalOnlineStudents;
+        double scholarshipCount = totalUGStudentScholarship;
+        double graduateAssistantshipCount = totalGraduateStudentCourses; 
+
+
+
         
         //open file to read
         int numOfStu = 0;
@@ -61,6 +71,12 @@ public class StudentDriver {
                 double scholAmount = Double.parseDouble(params[5]);
                 
                 students[numOfStu] = new UGStudent(name, id, enrolled, hasScholarships, scholAmount, coursesEnrolled);
+                
+                
+                // Update UGStudent informatin
+                totalUGStudents++;
+                
+                totalUGStudentScholarship++;
             }
             else if(numOfStu < gradstu + ugstu){
                 int id = Integer.parseInt(params[0]);
@@ -68,6 +84,7 @@ public class StudentDriver {
                 boolean enrolled = Boolean.parseBoolean(params[2]);
                 int coursesEnrolled = Integer.parseInt(params[3]);
                 boolean gradassist = Boolean.parseBoolean(params[4]);
+                
                 
                 if(params.length == 6){
                     String type = params[5];
@@ -77,6 +94,7 @@ public class StudentDriver {
                     students[numOfStu] = new GraduateStudent(name, id, enrolled, gradassist, coursesEnrolled);
                 }
                 
+              
                 
             }
             else{
@@ -84,8 +102,9 @@ public class StudentDriver {
                 String name = params[1];
                 boolean enrolled = Boolean.parseBoolean(params[2]);
                 int months = Integer.parseInt(params[3]);
-                
                 students[numOfStu] = new OnlineStudent(name, id, enrolled, months);
+                
+                
             }
             
             numOfStu ++;
@@ -95,19 +114,24 @@ public class StudentDriver {
         // Undergraduate Header
         System.out.println("**********Undergraduate students list**********");
         // Crate a loop that will print out the Undergraduate Student infoation
-        for (StudentFees student : students) {
-            if (student instanceof UGStudent) {
-                System.out.println(student);
+        for (StudentFees s : students) {
+            if (s instanceof UGStudent) {
+                System.out.println(s);
+                // Undergraduate Details
+                //totalUGStudents++;
+                //totalUGStudents += s.getPayableAmount();
                 System.out.println("");
             }
     }
+        // Undergraduate Students details
+        //System.out.println("Average Students fee: " + );
         
         // Graduate Header
         System.out.println("**********Graduate students list**********");
         // Crate a loop that will print out the Graduate Student infoation 
-        for (StudentFees student : students) {
-            if (student instanceof GraduateStudent) {
-                System.out.println(student);
+        for (StudentFees s : students) {
+            if (s instanceof GraduateStudent) {
+                System.out.println(s);
                 System.out.println("");
             }
     }
@@ -115,12 +139,28 @@ public class StudentDriver {
         // Online Header
         System.out.println("**********Online students list**********");
         // Crate a loop that will print out the Online Student infoation 
-        for (StudentFees student : students) {
-            if (student instanceof OnlineStudent) {
-                System.out.println(student);
+        for (StudentFees s : students) {
+            if (s instanceof OnlineStudent) {
+                System.out.println(s);
                 System.out.println("");
             }
     }
+        // Print Undergraduate Students details
+    System.out.println("**********Undergraduate Students details**********");
+    System.out.println("Average Students fee: " + avgUGStudentFee);
+    System.out.println("Scholarship count: " + scholarshipCount);
+    System.out.println("Total number of courses: " + totalUGStudentCourses);
+
+    // Print Graduate Students details
+    System.out.println("\n**********Graduate Students details**********");
+    System.out.println("Average Students fee: " + avgGraduateStudentFee);
+    System.out.println("Graduate Assistantship count: " + graduateAssistantshipCount);
+    System.out.println("Total number of courses: " + totalGraduateStudentCourses);
+
+    // Print Online Students details
+    System.out.println("\n**********Online Students details**********");
+    System.out.println("Average Students fee: " + avgOnlineStudentFee);
+
     
    
     
