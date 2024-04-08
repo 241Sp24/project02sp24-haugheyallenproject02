@@ -46,7 +46,7 @@ public class UGStudent extends StudentFees{
                 "\nScholarship: " + this.isHasScholarship () + 
                 "\nScholarship amount: " + this.getScholarshipAmount() +
                 "\nCourses enrolled: " + this.getCoursesEnrolled () +
-                "\n%.2fPayable amount: " + this.getPayableAmount();
+                "\nPayable amount: " + this.getPayableAmount();
     }
     
 }
