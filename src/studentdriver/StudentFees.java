@@ -10,7 +10,7 @@ public abstract class StudentFees {
     private int CREDITS_PER_COURSE = 3;
     private double PER_CREDIT_FEE = 543.50;
     
-    // Stedent fees class usind "this" statment 
+    // Stedent fees class using "this" statment 
     public StudentFees(String studentName, int studentID, boolean isEnrolled) {
         this.isEnrolled = isEnrolled;
         this.studentName = studentName;
@@ -41,7 +41,7 @@ public abstract class StudentFees {
     public void setIsEnrolled(boolean isEnrolled){
         this.isEnrolled = isEnrolled;
     }
-    // Apstact method getPayableAmount 
+    // Abstract method getPayableAmount 
     abstract double getPayableAmount();
     
     // toString method
