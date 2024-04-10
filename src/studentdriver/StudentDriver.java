@@ -93,9 +93,7 @@ public class StudentDriver {
                 else{
                     students[numOfStu] = new GraduateStudent(name, id, enrolled, gradassist, coursesEnrolled);
                 }
-                
               
-                
             }
             else{
                 int id = Integer.parseInt(params[0]);
@@ -110,6 +108,10 @@ public class StudentDriver {
             numOfStu ++;
         }
         
+        //as of right now, the code will take in the user input and file input and put everything into the array of StudentFees objects
+        //the only things left to do are to print out the entire list of students and calculate out all the student deatails at the bottom
+    
+    
         System.out.println(""); // Space
         // Undergraduate Header
         System.out.println("**********Undergraduate students list**********");
