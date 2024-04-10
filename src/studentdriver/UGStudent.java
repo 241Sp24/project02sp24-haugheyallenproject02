@@ -28,6 +28,7 @@ public class UGStudent extends StudentFees{
     public int getCoursesEnrolled(){
         return coursesEnrolled;
     }
+    @Override
     public double getPayableAmount(){
         // Tuition fee amount calculated 
         double tuitionCost = (((super.getCREDITS_PER_COURSE() * coursesEnrolled * super.getCREDITS_PER_COURSE()) + ADDITONAL_FEE) - scholarshipAmount);

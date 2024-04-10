@@ -9,30 +9,18 @@ public class StudentDriver {
         System.out.println("Project02");
     
         // Varablies UGStudents details, Graduate Students details, and Online Students details
-        //int totalUGStudents = 0;
-        //double totalUGStudentFees = 0;
-        //double totalUGStudentScholarship = 0;
-        //double totalUGStudentCourses = 0;
+        double totalUGStudentFees = 0;
+        double totalUGStudentScholarship = 0;
+        double totalUGStudentCourses = 0;
         
         // GraduateStudent
-        //int totalGraduateStudent = 0;
-        //double totalGraduateStudentFees = 0;
-        //double totalGraduateStudentScholarship = 0;
-        //double totalGraduateStudentCourses = 0;
+        double totalGraduateStudentFees = 0;
+        double totalGraduateStudentScholarship = 0;
+        double totalGraduateStudentCourses = 0;
         
-        // Online Student
-        //int totalOnlineStudents = 0;
-        //double totalOnlineStudentFees = 0;
+        //Online Student
+        double totalOnlineStudentFees = 0;
         
-        // Find the average and other information
-        double avgUGStudentFee = totalUGStudentFees / totalugstu;
-        double avgGraduateStudentFee = totalGraduateStudentFees / totalGraduateStudent;
-        double avgOnlineStudentFee = totalOnlineStudentFees / totalOnlineStudents;
-        double scholarshipCount = totalUGStudentScholarship;
-        double graduateAssistantshipCount = totalGraduateStudentCourses; 
-
-
-
         
         //open file to read
         int numOfStu = 0;
@@ -72,11 +60,14 @@ public class StudentDriver {
                 
                 students[numOfStu] = new UGStudent(name, id, enrolled, hasScholarships, scholAmount, coursesEnrolled);
                 
+                totalUGStudentFees += students[numOfStu].getPayableAmount();
                 
-                // Update UGStudent informatin
-                totalUGStudents++;
+                if(hasScholarships == true){
+                    totalUGStudentScholarship += 1;
+                }
                 
-                totalUGStudentScholarship++;
+                totalUGStudentCourses += coursesEnrolled;
+                
             }
             else if(numOfStu < gradstu + ugstu){
                 int id = Integer.parseInt(params[0]);
@@ -108,9 +99,12 @@ public class StudentDriver {
             numOfStu ++;
         }
         
-        //as of right now, the code will take in the user input and file input and put everything into the array of StudentFees objects
-        //the only things left to do are to print out the entire list of students and calculate out all the student deatails at the bottom
-    
+        // Find the average and other information
+        double avgUGStudentFee = totalUGStudentFees / ugstu;
+        double avgGraduateStudentFee = totalGraduateStudentFees / gradstu;
+        double avgOnlineStudentFee = totalOnlineStudentFees / onstu;
+        double scholarshipCount = totalUGStudentScholarship;
+        double graduateAssistantshipCount = totalGraduateStudentCourses; 
     
         System.out.println(""); // Space
         // Undergraduate Header
