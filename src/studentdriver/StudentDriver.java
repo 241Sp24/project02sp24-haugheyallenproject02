@@ -24,12 +24,7 @@ public class StudentDriver {
         int totalOnlineStudents = 0;
         double totalOnlineStudentFees = 0;
         
-        // Find the average and other information
-        double avgUGStudentFee = totalUGStudentFees / totalUGStudents;
-        double avgGraduateStudentFee = totalGraduateStudentFees / totalGraduateStudent;
-        double avgOnlineStudentFee = totalOnlineStudentFees / totalOnlineStudents;
-        double scholarshipCount = totalUGStudentScholarship;
-        double graduateAssistantshipCount = totalGraduateStudentCourses; 
+         
 
 
 
@@ -108,9 +103,7 @@ public class StudentDriver {
             numOfStu ++;
         }
         
-        //as of right now, the code will take in the user input and file input and put everything into the array of StudentFees objects
-        //the only things left to do are to print out the entire list of students and calculate out all the student deatails at the bottom
-    
+        
     
         System.out.println(""); // Space
         // Undergraduate Header
@@ -146,26 +139,31 @@ public class StudentDriver {
                 System.out.println(s);
                 System.out.println("");
             }
-    }
+        }
+        
+        // Find the average and other information
+        double avgUGStudentFee = totalUGStudentFees / ugstu;
+        double avgGraduateStudentFee = totalGraduateStudentFees / gradstu;
+        double avgOnlineStudentFee = totalOnlineStudentFees / onstu;
+        double scholarshipCount = totalUGStudentScholarship;
+        double graduateAssistantshipCount = totalGraduateStudentCourses;
+        
         // Print Undergraduate Students details
-    System.out.println("**********Undergraduate Students details**********");
-    System.out.println("Average Students fee: " + avgUGStudentFee);
-    System.out.println("Scholarship count: " + scholarshipCount);
-    System.out.println("Total number of courses: " + totalUGStudentCourses);
+        System.out.println("**********Undergraduate Students details**********");
+        System.out.println("Average Students fee: " + avgUGStudentFee);
+        System.out.println("Scholarship count: " + scholarshipCount);
+        System.out.println("Total number of courses: " + totalUGStudentCourses);
 
-    // Print Graduate Students details
-    System.out.println("\n**********Graduate Students details**********");
-    System.out.println("Average Students fee: " + avgGraduateStudentFee);
-    System.out.println("Graduate Assistantship count: " + graduateAssistantshipCount);
-    System.out.println("Total number of courses: " + totalGraduateStudentCourses);
+        // Print Graduate Students details
+        System.out.println("\n**********Graduate Students details**********");
+        System.out.println("Average Students fee: " + avgGraduateStudentFee);
+        System.out.println("Graduate Assistantship count: " + graduateAssistantshipCount);
+        System.out.println("Total number of courses: " + totalGraduateStudentCourses);
 
-    // Print Online Students details
-    System.out.println("\n**********Online Students details**********");
-    System.out.println("Average Students fee: " + avgOnlineStudentFee);
+        // Print Online Students details
+        System.out.println("\n**********Online Students details**********");
+        System.out.println("Average Students fee: " + avgOnlineStudentFee);
 
-    
-   
-    
-    
-}
+
+    }
 }
