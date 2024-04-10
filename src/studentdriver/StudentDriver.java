@@ -9,23 +9,23 @@ public class StudentDriver {
         System.out.println("Project02");
     
         // Varablies UGStudents details, Graduate Students details, and Online Students details
-        int totalUGStudents = 0;
-        double totalUGStudentFees = 0;
-        double totalUGStudentScholarship = 0;
-        double totalUGStudentCourses = 0;
+        //int totalUGStudents = 0;
+        //double totalUGStudentFees = 0;
+        //double totalUGStudentScholarship = 0;
+        //double totalUGStudentCourses = 0;
         
         // GraduateStudent
-        int totalGraduateStudent = 0;
-        double totalGraduateStudentFees = 0;
-        double totalGraduateStudentScholarship = 0;
-        double totalGraduateStudentCourses = 0;
+        //int totalGraduateStudent = 0;
+        //double totalGraduateStudentFees = 0;
+        //double totalGraduateStudentScholarship = 0;
+        //double totalGraduateStudentCourses = 0;
         
         // Online Student
-        int totalOnlineStudents = 0;
-        double totalOnlineStudentFees = 0;
+        //int totalOnlineStudents = 0;
+        //double totalOnlineStudentFees = 0;
         
         // Find the average and other information
-        double avgUGStudentFee = totalUGStudentFees / totalUGStudents;
+        double avgUGStudentFee = totalUGStudentFees / totalugstu;
         double avgGraduateStudentFee = totalGraduateStudentFees / totalGraduateStudent;
         double avgOnlineStudentFee = totalOnlineStudentFees / totalOnlineStudents;
         double scholarshipCount = totalUGStudentScholarship;
