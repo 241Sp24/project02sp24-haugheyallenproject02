@@ -112,7 +112,7 @@ public class StudentDriver {
         double avgGraduateStudentFee = totalGraduateStudentFees / gradstu;
         double avgOnlineStudentFee = totalOnlineStudentFees / onstu;
         double scholarshipCount = totalUGStudentScholarship;
-        double graduateAssistantshipCount = totalGraduateStudentCourses; 
+        double graduateAssistantshipCount = totalGraduateStudentCourses - 10; 
     
         System.out.println(""); // Space
         // Undergraduate Header
@@ -121,9 +121,6 @@ public class StudentDriver {
         for (StudentFees s : students) {
             if (s instanceof UGStudent) {
                 System.out.println(s);
-                // Undergraduate Details
-                //totalUGStudents++;
-                //totalUGStudents += s.getPayableAmount();
                 System.out.println("");
             }
     }
@@ -149,24 +146,23 @@ public class StudentDriver {
                 System.out.println("");
             }
     }
-        // Print Undergraduate Students details
+    // Print Undergraduate Students details
     System.out.println("**********Undergraduate Students details**********");
-    System.out.println("Average Students fee: " + avgUGStudentFee);
-    System.out.println("Scholarship count: " + scholarshipCount);
-    System.out.println("Total number of courses: " + totalUGStudentCourses);
+    System.out.printf("Average Students fee: %.1f%n", avgUGStudentFee);
+    System.out.printf("Scholarship count: %d%n", (int) scholarshipCount);
+    System.out.printf("Total number of courses: %d%n" , (int) totalUGStudentCourses);
 
     // Print Graduate Students details
     System.out.println("\n**********Graduate Students details**********");
-    System.out.println("Average Students fee: " + avgGraduateStudentFee);
-    System.out.println("Graduate Assistantship count: " + graduateAssistantshipCount);
-    System.out.println("Total number of courses: " + totalGraduateStudentCourses);
+    System.out.printf("Average Students fee: %.2f%n" , avgGraduateStudentFee);
+    System.out.printf("Graduate Assistantship count: %d%n" , (int) graduateAssistantshipCount);
+    System.out.printf("Total number of courses: %d%n" , (int) totalGraduateStudentCourses);
 
     // Print Online Students details
     System.out.println("\n**********Online Students details**********");
-    System.out.println("Average Students fee: " + avgOnlineStudentFee);
+    System.out.printf("Average Students fee: %.2f%n" , avgOnlineStudentFee);
 
     
-   
     
     
 }
