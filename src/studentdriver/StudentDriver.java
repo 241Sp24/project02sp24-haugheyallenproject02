@@ -84,6 +84,14 @@ public class StudentDriver {
                 else{
                     students[numOfStu] = new GraduateStudent(name, id, enrolled, gradassist, coursesEnrolled);
                 }
+                
+                totalGraduateStudentFees += students[numOfStu].getPayableAmount();
+                
+                if(gradassist == true){
+                    totalGraduateStudentScholarship += 1;
+                }
+                
+                totalGraduateStudentCourses += coursesEnrolled;
               
             }
             else{
@@ -93,7 +101,7 @@ public class StudentDriver {
                 int months = Integer.parseInt(params[3]);
                 students[numOfStu] = new OnlineStudent(name, id, enrolled, months);
                 
-                
+                totalOnlineStudentFees += students[numOfStu].getPayableAmount();
             }
             
             numOfStu ++;
