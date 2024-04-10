@@ -37,14 +37,12 @@ public class GraduateStudent extends StudentFees{
     }
     
     //toString
+    @Override
     public String toString(){
-        return "Student name: " + super.getStudentName() + 
-               "\nStudent id: " + super.getStudentID() + 
-               "\nEnrolled: " + super.isIsEnrolled() + 
-               "\nGraduate assistant: " + this.isIsGraduateAssistant() + 
-               "\nGraduate assistant type: " + this.graduateAssistantType + 
-               "\nCourses enrolled: " + this.coursesEnrolled + 
-               "\nPayable amount: " + this.getPayableAmount();
+        return String.format("Student name: %s%n" + "Student id: %d%n" + "Enrolled: %b%n" + "Graduate assistant: %b%n" +
+            "Graduate assistant type: %s%n" + "Courses enrolled: %d%n" + "Payable amount: %.2f", super.getStudentName(),
+            super.getStudentID(), super.isIsEnrolled(), this.isIsGraduateAssistant(), this.graduateAssistantType,
+            this.coursesEnrolled, this.getPayableAmount());
     }
     
 }

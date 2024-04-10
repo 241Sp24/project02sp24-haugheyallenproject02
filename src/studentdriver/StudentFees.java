@@ -45,6 +45,7 @@ public abstract class StudentFees {
     abstract double getPayableAmount();
     
     // toString method
+    @Override
     public String toString(){
         return "Student name: " + this.getStudentName() +
                 "\nStudent id: " + this.getStudentID() +
