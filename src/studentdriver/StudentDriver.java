@@ -6,8 +6,7 @@ import java.io.*;
 public class StudentDriver {
 
     public static void main(String[] args) throws FileNotFoundException{
-        System.out.println("Project02");
-    
+        
         // Varablies UGStudents details, Graduate Students details, and Online Students details
         double totalUGStudentFees = 0;
         double totalUGStudentScholarship = 0;
