@@ -31,9 +31,9 @@ public class UGStudent extends StudentFees{
     @Override
     public double getPayableAmount(){
         // Tuition fee amount calculated 
-        double tuitionCost = (((super.getCREDITS_PER_COURSE() * coursesEnrolled * super.getCREDITS_PER_COURSE()) + ADDITONAL_FEE) - scholarshipAmount);
+        double tuitionCost = (((super.getCREDITS_PER_COURSE() * coursesEnrolled * super.getPER_CREDIT_FEE())));
         double totalCost = (tuitionCost + ADDITONAL_FEE);
-        // if statmente that subtacts the schoalrship amount
+        // if statment that subtracts the schoalrship amount
         if(hasScholarship) {
             totalCost -= scholarshipAmount;
         }

@@ -45,6 +45,7 @@ public class StudentDriver {
         //create array
         StudentFees[] students = new StudentFees[ugstu + gradstu + onstu];
         
+        
         //put information into the array
         while(input.hasNext() && numOfStu < ugstu + gradstu + onstu){
             String line = input.nextLine();

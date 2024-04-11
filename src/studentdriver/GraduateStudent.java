@@ -33,7 +33,7 @@ public class GraduateStudent extends StudentFees{
     
     @Override
     public double getPayableAmount(){
-        return super.getCREDITS_PER_COURSE() * super.getPER_CREDIT_FEE() + this.ADDITIONAL_FEES;
+        return (super.getCREDITS_PER_COURSE()) + (this.coursesEnrolled) * (super.getPER_CREDIT_FEE());
     }
     
     //toString
