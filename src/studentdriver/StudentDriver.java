@@ -161,8 +161,6 @@ public class StudentDriver {
     // Print Online Students details
     System.out.println("\n**********Online Students details**********");
     System.out.printf("Average Students fee: %.2f%n" , avgOnlineStudentFee);
-
-    
     
     
 }
